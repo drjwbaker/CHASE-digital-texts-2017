@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.bl.uk/schemas/alto/alto-1-4.xsd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<Description>
+		<MeasurementUnit>mm10</MeasurementUnit>
+		<sourceImageInformation>
+			<fileName>//head1/IN/2007-34/A0010556622/004770.jp2</fileName>
+		</sourceImageInformation>
+		<OCRProcessing ID="OCRPROCESSING_1">
+			<preProcessingStep>
+				<processingSoftware>
+					<softwareCreator>CCS Content Conversion Specialists GmbH, Germany</softwareCreator>
+					<softwareName>CCS docWORKS</softwareName>
+					<softwareVersion>6.1-0.54</softwareVersion>
+				</processingSoftware>
+			</preProcessingStep>
+			<ocrProcessingStep>
+				<processingSoftware>
+					<softwareCreator>ABBYY (BIT Software), Russia</softwareCreator>
+					<softwareName>Finereader</softwareName>
+				</processingSoftware>
+			</ocrProcessingStep>
+		</OCRProcessing>
+	</Description>
+	<Styles>
+		<TextStyle ID="TXT_0" FONTSIZE="9" FONTFAMILY="Courier New"/>
+		<TextStyle ID="TXT_1" FONTSIZE="11" FONTFAMILY="Courier New"/>
+		<ParagraphStyle ID="PAR_RIGHT" ALIGN="Right"/>
+		<ParagraphStyle ID="PAR_LEFT" ALIGN="Left"/>
+	</Styles>
+	<Layout>
+		<Page ID="P10" PHYSICAL_IMG_NR="10" HEIGHT="2000" WIDTH="1190" QUALITY="Damaged" POSITION="Left" ACCURACY="42.49">
+			<TopMargin ID="P10_TM00001" HPOS="0" VPOS="0" WIDTH="1190" HEIGHT="0"/>
+			<LeftMargin ID="P10_LM00001" HPOS="0" VPOS="0" WIDTH="0" HEIGHT="2000"/>
+			<RightMargin ID="P10_RM00001" HPOS="1190" VPOS="0" WIDTH="0" HEIGHT="2000"/>
+			<BottomMargin ID="P10_BM00001" HPOS="0" VPOS="2000" WIDTH="1190" HEIGHT="0"/>
+			<PrintSpace ID="P10_PS00001" HPOS="0" VPOS="0" WIDTH="1190" HEIGHT="2000">
+				<TextBlock ID="P10_TB00001" HPOS="430" VPOS="1750" WIDTH="536" HEIGHT="29" STYLEREFS="TXT_0 PAR_RIGHT">
+					<TextLine ID="P10_TL00001" HPOS="431" VPOS="1751" WIDTH="535" HEIGHT="28">
+						<String ID="P10_ST00001" HPOS="431" VPOS="1757" WIDTH="15" HEIGHT="10" CONTENT='"' WC="0.82" CC="1"/>
+						<SP ID="P10_SP00001" HPOS="446" VPOS="1767" WIDTH="9"/>
+						<String ID="P10_ST00002" HPOS="455" VPOS="1755" WIDTH="16" HEIGHT="19" CONTENT="A" WC="0.41" CC="5"/>
+						<SP ID="P10_SP00002" HPOS="471" VPOS="1774" WIDTH="13"/>
+						<String ID="P10_ST00003" HPOS="484" VPOS="1756" WIDTH="129" HEIGHT="23" CONTENT="dijtant'age" WC="0.32" CC="55878875870"/>
+						<SP ID="P10_SP00003" HPOS="613" VPOS="1779" WIDTH="12"/>
+						<String ID="P10_ST00004" HPOS="625" VPOS="1755" WIDTH="48" HEIGHT="19" CONTENT="asks" WC="0.26" CC="7857"/>
+						<SP ID="P10_SP00004" HPOS="673" VPOS="1779" WIDTH="10"/>
+						<String ID="P10_ST00005" HPOS="683" VPOS="1754" WIDTH="69" HEIGHT="20" CONTENT="where" WC="0.32" CC="78827"/>
+						<SP ID="P10_SP00005" HPOS="752" VPOS="1779" WIDTH="11"/>
+						<String ID="P10_ST00006" HPOS="763" VPOS="1753" WIDTH="36" HEIGHT="20" CONTENT="the" WC="0.42" CC="808"/>
+						<SP ID="P10_SP00006" HPOS="799" VPOS="1779" WIDTH="11"/>
+						<String ID="P10_ST00007" HPOS="810" VPOS="1753" WIDTH="65" HEIGHT="19" CONTENT="fabric" WC="0.34" CC="468837"/>
+						<SP ID="P10_SP00007" HPOS="875" VPOS="1779" WIDTH="10"/>
+						<String ID="P10_ST00008" HPOS="885" VPOS="1751" WIDTH="81" HEIGHT="20" CONTENT='stood."' WC="0.52" CC="7826601"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P10_TB00002" HPOS="253" VPOS="1795" WIDTH="886" HEIGHT="49" STYLEREFS="TXT_1 PAR_LEFT">
+					<TextLine ID="P10_TL00002" HPOS="256" VPOS="1801" WIDTH="881" HEIGHT="40">
+						<String ID="P10_ST00009" HPOS="256" VPOS="1809" WIDTH="99" HEIGHT="32" CONTENT="THIS" WC="0.43" CC="4881"/>
+						<SP ID="P10_SP00008" HPOS="355" VPOS="1841" WIDTH="23"/>
+						<String ID="P10_ST00010" HPOS="378" VPOS="1808" WIDTH="36" HEIGHT="31" CONTENT="IS" WC="0.69" CC="41"/>
+						<SP ID="P10_SP00009" HPOS="414" VPOS="1841" WIDTH="22"/>
+						<String ID="P10_ST00011" HPOS="436" VPOS="1808" WIDTH="91" HEIGHT="31" CONTENT="THE" WC="0.61" CC="380"/>
+						<SP ID="P10_SP00010" HPOS="527" VPOS="1841" WIDTH="23"/>
+						<String ID="P10_ST00012" HPOS="550" VPOS="1807" WIDTH="144" HEIGHT="31" CONTENT="HOUSE" WC="0.19" CC="87877"/>
+						<SP ID="P10_SP00011" HPOS="694" VPOS="1841" WIDTH="22"/>
+						<String ID="P10_ST00013" HPOS="716" VPOS="1803" WIDTH="123" HEIGHT="32" CONTENT="THAT" WC="0.47" CC="0874"/>
+						<SP ID="P10_SP00012" HPOS="839" VPOS="1841" WIDTH="23"/>
+						<String ID="P10_ST00014" HPOS="862" VPOS="1801" WIDTH="110" HEIGHT="31" CONTENT="JACK" WC="0.51" CC="7217"/>
+						<SP ID="P10_SP00013" HPOS="972" VPOS="1841" WIDTH="24"/>
+						<String ID="P10_ST00015" HPOS="996" VPOS="1801" WIDTH="141" HEIGHT="34" CONTENT="BULT." WC="0.43" CC="78604"/>
+					</TextLine>
+					<TextLine ID="P10_TL00003" HPOS="562" VPOS="1841" WIDTH="195" HEIGHT="3">
+						<String ID="P10_ST00016" HPOS="562" VPOS="1842" WIDTH="23" HEIGHT="2" CONTENT="_*_*" WC="0.33" CC="6766" STYLEREFS="TXT_0"/>
+						<SP ID="P10_SP00014" HPOS="585" VPOS="1844" WIDTH="45"/>
+						<String ID="P10_ST00017" HPOS="630" VPOS="1841" WIDTH="42" HEIGHT="3" CONTENT="-__T_" WC="0.29" CC="65786" STYLEREFS="TXT_0"/>
+						<SP ID="P10_SP00015" HPOS="672" VPOS="1844" WIDTH="40"/>
+						<String ID="P10_ST00018" HPOS="712" VPOS="1843" WIDTH="45" HEIGHT="1" CONTENT="im*_*-'." WC="0.30" CC="87667667" STYLEREFS="TXT_0"/>
+					</TextLine>
+				</TextBlock>
+				<ComposedBlock ID="P10_CB00001" HPOS="213" VPOS="113" WIDTH="946" HEIGHT="1627" STYLEREFS="TXT_0 PAR_LEFT" TYPE="Illustration">
+					<GraphicalElement ID="P10_CB00001_SUB" HPOS="213" VPOS="113" WIDTH="946" HEIGHT="1627"/>
+				</ComposedBlock>
+			</PrintSpace>
+		</Page>
+	</Layout>
+</alto>

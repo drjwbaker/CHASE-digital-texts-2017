@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.bl.uk/schemas/alto/alto-1-4.xsd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<Description>
+		<MeasurementUnit>mm10</MeasurementUnit>
+		<sourceImageInformation>
+			<fileName>//head1/IN/2007-34/A0010556622/004776.jp2</fileName>
+		</sourceImageInformation>
+		<OCRProcessing ID="OCRPROCESSING_1">
+			<preProcessingStep>
+				<processingSoftware>
+					<softwareCreator>CCS Content Conversion Specialists GmbH, Germany</softwareCreator>
+					<softwareName>CCS docWORKS</softwareName>
+					<softwareVersion>6.1-0.54</softwareVersion>
+				</processingSoftware>
+			</preProcessingStep>
+			<ocrProcessingStep>
+				<processingSoftware>
+					<softwareCreator>ABBYY (BIT Software), Russia</softwareCreator>
+					<softwareName>Finereader</softwareName>
+				</processingSoftware>
+			</ocrProcessingStep>
+		</OCRProcessing>
+	</Description>
+	<Styles>
+		<TextStyle ID="TXT_0" FONTSIZE="10" FONTFAMILY="Courier New"/>
+		<TextStyle ID="TXT_1" FONTSIZE="9" FONTFAMILY="Courier New"/>
+		<ParagraphStyle ID="PAR_LEFT" ALIGN="Left"/>
+	</Styles>
+	<Layout>
+		<Page ID="P16" PHYSICAL_IMG_NR="16" HEIGHT="1999" WIDTH="1190" QUALITY="Damaged" POSITION="Left" ACCURACY="50.05">
+			<TopMargin ID="P16_TM00001" HPOS="0" VPOS="0" WIDTH="1190" HEIGHT="0"/>
+			<LeftMargin ID="P16_LM00001" HPOS="0" VPOS="0" WIDTH="0" HEIGHT="1999"/>
+			<RightMargin ID="P16_RM00001" HPOS="1190" VPOS="0" WIDTH="0" HEIGHT="1999"/>
+			<BottomMargin ID="P16_BM00001" HPOS="0" VPOS="1999" WIDTH="1190" HEIGHT="0"/>
+			<PrintSpace ID="P16_PS00001" HPOS="0" VPOS="0" WIDTH="1190" HEIGHT="1999">
+				<TextBlock ID="P16_TB00001" HPOS="220" VPOS="1660" WIDTH="774" HEIGHT="190" STYLEREFS="TXT_0 PAR_LEFT">
+					<TextLine ID="P16_TL00001" HPOS="524" VPOS="1662" WIDTH="282" HEIGHT="21">
+						<String ID="P16_ST00001" HPOS="524" VPOS="1662" WIDTH="14" HEIGHT="10" CONTENT='"' WC="0.58" CC="4" STYLEREFS="TXT_1"/>
+						<SP ID="P16_SP00001" HPOS="538" VPOS="1672" WIDTH="11"/>
+						<String ID="P16_ST00002" HPOS="549" VPOS="1662" WIDTH="64" HEIGHT="19" CONTENT="Great" WC="0.45" CC="06686" STYLEREFS="TXT_1"/>
+						<SP ID="P16_SP00002" HPOS="613" VPOS="1681" WIDTH="10"/>
+						<String ID="P16_ST00003" HPOS="623" VPOS="1663" WIDTH="70" HEIGHT="19" CONTENT="offices" WC="0.45" CC="4333876" STYLEREFS="TXT_1"/>
+						<SP ID="P16_SP00003" HPOS="693" VPOS="1682" WIDTH="10"/>
+						<String ID="P16_ST00004" HPOS="703" VPOS="1664" WIDTH="41" HEIGHT="19" CONTENT="will" WC="0.64" CC="6800" STYLEREFS="TXT_1"/>
+						<SP ID="P16_SP00004" HPOS="744" VPOS="1683" WIDTH="11"/>
+						<String ID="P16_ST00005" HPOS="755" VPOS="1664" WIDTH="51" HEIGHT="19" CONTENT="have" WC="0.60" CC="6350" STYLEREFS="TXT_1"/>
+					</TextLine>
+					<TextLine ID="P16_TL00002" HPOS="321" VPOS="1696" WIDTH="171" HEIGHT="21">
+						<String ID="P16_ST00006" HPOS="321" VPOS="1696" WIDTH="64" HEIGHT="20" CONTENT="Great" WC="0.48" CC="02876" STYLEREFS="TXT_1"/>
+						<SP ID="P16_SP00005" HPOS="385" VPOS="1716" WIDTH="8"/>
+						<String ID="P16_ST00007" HPOS="393" VPOS="1697" WIDTH="99" HEIGHT="20" CONTENT='talents."' WC="0.54" CC="674780600" STYLEREFS="TXT_1"/>
+					</TextLine>
+					<TextLine ID="P16_TL00003" HPOS="225" VPOS="1747" WIDTH="766" HEIGHT="45">
+						<String ID="P16_ST00008" HPOS="225" VPOS="1747" WIDTH="79" HEIGHT="30" CONTENT="This" WC="0.68" CC="0507"/>
+						<SP ID="P16_SP00006" HPOS="304" VPOS="1777" WIDTH="16"/>
+						<String ID="P16_ST00009" HPOS="320" VPOS="1749" WIDTH="23" HEIGHT="28" CONTENT="is" WC="0.31" CC="57"/>
+						<SP ID="P16_SP00007" HPOS="343" VPOS="1777" WIDTH="16"/>
+						<String ID="P16_ST00010" HPOS="359" VPOS="1749" WIDTH="91" HEIGHT="29" CONTENT="THE" WC="0.80" CC="050"/>
+						<SP ID="P16_SP00008" HPOS="450" VPOS="1778" WIDTH="24"/>
+						<String ID="P16_ST00011" HPOS="474" VPOS="1750" WIDTH="139" HEIGHT="31" CONTENT="MAN—" WC="0.45" CC="2468"/>
+						<String ID="P16_ST00012" HPOS="615" VPOS="1753" WIDTH="39" HEIGHT="28" CONTENT="all" WC="1.00" CC="000"/>
+						<SP ID="P16_SP00009" HPOS="654" VPOS="1781" WIDTH="15"/>
+						<String ID="P16_ST00013" HPOS="669" VPOS="1752" WIDTH="114" HEIGHT="31" CONTENT="shaven" WC="0.53" CC="750274"/>
+						<SP ID="P16_SP00010" HPOS="783" VPOS="1783" WIDTH="23"/>
+						<String ID="P16_ST00014" HPOS="806" VPOS="1756" WIDTH="62" HEIGHT="29" CONTENT="and" WC="0.17" CC="788"/>
+						<SP ID="P16_SP00011" HPOS="868" VPOS="1785" WIDTH="16"/>
+						<String ID="P16_ST00015" HPOS="884" VPOS="1756" WIDTH="107" HEIGHT="36" CONTENT="shorn," WC="0.58" CC="601680"/>
+					</TextLine>
+					<TextLine ID="P16_TL00004" HPOS="224" VPOS="1808" WIDTH="724" HEIGHT="42">
+						<String ID="P16_ST00016" HPOS="224" VPOS="1808" WIDTH="50" HEIGHT="30" CONTENT="All" WC="0.54" CC="363"/>
+						<SP ID="P16_SP00012" HPOS="274" VPOS="1838" WIDTH="19"/>
+						<String ID="P16_ST00017" HPOS="293" VPOS="1810" WIDTH="121" HEIGHT="29" CONTENT="cover'd" WC="0.48" CC="8750806"/>
+						<SP ID="P16_SP00013" HPOS="414" VPOS="1839" WIDTH="16"/>
+						<String ID="P16_ST00018" HPOS="430" VPOS="1811" WIDTH="72" HEIGHT="29" CONTENT="with" WC="0.46" CC="8066"/>
+						<SP ID="P16_SP00014" HPOS="502" VPOS="1840" WIDTH="17"/>
+						<String ID="P16_ST00019" HPOS="519" VPOS="1813" WIDTH="117" HEIGHT="30" CONTENT="Orders" WC="0.22" CC="778588"/>
+						<String ID="P16_ST00020" HPOS="638" VPOS="1832" WIDTH="41" HEIGHT="4" CONTENT="—" WC="0.20" CC="8"/>
+						<String ID="P16_ST00021" HPOS="679" VPOS="1815" WIDTH="59" HEIGHT="29" CONTENT="and" WC="0.16" CC="788"/>
+						<SP ID="P16_SP00015" HPOS="738" VPOS="1844" WIDTH="17"/>
+						<String ID="P16_ST00022" HPOS="755" VPOS="1816" WIDTH="37" HEIGHT="28" CONTENT="all" WC="0.52" CC="571"/>
+						<SP ID="P16_SP00016" HPOS="792" VPOS="1844" WIDTH="18"/>
+						<String ID="P16_ST00023" HPOS="810" VPOS="1816" WIDTH="115" HEIGHT="31" CONTENT="forlorn" WC="0.18" CC="7886888"/>
+						<SP ID="P16_SP00017" HPOS="925" VPOS="1847" WIDTH="18"/>
+						<String ID="P16_ST00024" HPOS="943" VPOS="1831" WIDTH="5" HEIGHT="19" CONTENT=";" WC="1.00" CC="0"/>
+					</TextLine>
+				</TextBlock>
+				<ComposedBlock ID="P16_CB00001" HPOS="238" VPOS="65" WIDTH="789" HEIGHT="1586" STYLEREFS="TXT_1 PAR_LEFT" TYPE="Illustration">
+					<GraphicalElement ID="P16_CB00001_SUB" HPOS="238" VPOS="65" WIDTH="789" HEIGHT="1586"/>
+				</ComposedBlock>
+			</PrintSpace>
+		</Page>
+	</Layout>
+</alto>
