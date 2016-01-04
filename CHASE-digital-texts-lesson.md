@@ -29,6 +29,8 @@ We'll be covering quite a lot but the key commands are in the handout for refere
 
 **SLIDE** What?
 
+The key here is that the digitised text is a replication of a thing, a conversion of a physical object into ones and zeros with direct preservation and access benefits, not the thing itself. This is not necesary a hinderance, rather these digital representations of real texts can be a gateway for transformation of physical things into new research objects with their own associated affordances and challenges; a transformation that can enrich, connect, and reconfigure the original data point, the thing itself.
+
 **SLIDE** How?
 
 _____
