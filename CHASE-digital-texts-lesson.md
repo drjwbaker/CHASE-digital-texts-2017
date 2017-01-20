@@ -1,13 +1,11 @@
-# CHASE Digital Texts Workshop, 19 January 2015
-
-19 January 2015, Open University, London
+# CHASE Digital Texts Workshop, February 2017, Open University, London
 
 _____
 ### Installation (to be completed before the session)
 
 Windows users, see the section entitled 'Installing Git Bash' in the Programming Historian lesson [*Introduction to the Bash Command Line*](http://programminghistorian.org/lessons/intro-to-bash). OS X and Linux users, simply make sure you know how to find your 'Terminal'.
 
-The data required for the lesson can be downloaded at: `https://github.com/drjwbaker/CHASE-digital-texts/raw/master/digitext.zip`
+The data required for the lesson can be downloaded at: `???`
 
 ______
 ## Morning
@@ -75,57 +73,6 @@ Within the Unix shell you can now:
 - use the command `cd` to move around your computer
 
 ______
-### Basics II
-
-**SLIDE** As well as navigating directories, you can interact with files on the command line: you can read them, open them, run them, and even edit them, often without ever having to leave the interface. Sometimes it is easier to do this using a Graphical User Interface, such as Word or your normal explorer, but the more you work here the more it is useful and the more you write scripts the more you'll need this basic knowledge
-
-Here's a few basic ways to interact with files. 
-
-First, you can create a new directory. For convenience's sake, we will create it in directory you extracted the data provided in advance. Here type `mkdir firstdir` and hit enter. This used the `mkdir` command (meaning 'Making Directory') to create a directory named 'firstdir'. Now, move into that directory using the `cd` command.
-
-But wait! There's a trick to make things a bit quicker. Go up one directory (`cd ..`). To navigate to the `firstdir` directory you could type `cd firstdir`. Alternatively, you could type `cd f` and then hit tab. You will notice that the interface completes the line to `cd firstdir`. **Hitting tab at any time within the shell will prompt it to attempt to auto-complete the line based on the files or sub-directories in the current directory. Where two or more files have the same characters, the auto-complete will only fill up to the first point of difference, after which you can add more characters, and try using tab again. We would encourage using this method throughout today to see how it behaves (as it saves loads of time and effort!).**
-
-The next step is to manipulate files.
-
-Navigate to the `text` directory in the pre-circulated data directory. In here there is a copy of Jonathan Swift's *Gulliver's Travels* downloaded from Project Gutenberg. type `ls -lh` and hit enter to see details of this file.
-
-You can read the text right here. To try this, type `cat 829-0.txt`. The terminal window erupts and *Gulliver's Travels* cascades by: this is what is known as printing to the shell. And it is great, in theory, but you can't really make any sense of that amount of text. Instead, you may want to just look at the first or the last bit of the file. **TIP: to cancel this print of `829-0.txt`, or indeed any ongoing in the Unix shell, hit `ctrl+c`**
-
-Type `head 829-0.txt` and hit enter. This provides a view of the first ten lines, whereas `tail 829-0.txt` provides a perspective on the last ten lines. This is a good way to quickly determine the contents of the file.
-
-You may also want to change the file name to something more descriptive. You can 'move' it to a new name by using the `mv` or move command. To do this type `mv 829-0.txt gulliver.txt` and hit enter.
-
-Afterwards, when you perform a `ls` command, you will see that it is now `gulliver.txt`. Had you wanted to duplicate it, you could have used the `cp` or copy command by typing `cp 829-0.txt gulliver.txt`
-
-Now that you have seen and used several new commands, it's time for another trick. Hit the up arrow twice on your keyboard. Notice that `mv 829-0.txt gulliver.txt` appears before your cursor. You can continue pressing the up arrow to cycle through your previous commands. The down arrow cycles back toward your most recent command. This is another important labour saving function and something we'll use a lot this evening.
-
-After having read and renamed several files, you may wish to bring their text together into one file. Before we do that let's use `cp` to duplicate the Gulliver file and give it the filename `gulliver-backup.txt`: any ideas how you do that? (**ANSWER**: `cp gulliver.txt gulliver-backup.txt`). Good, now that you have two copies of *Gulliver's Travels*, let's put them together to make an **even longer** book. 
-
-To combine, or concatenate, two or more files use the `cat` command again. Type `cat gulliver.txt gulliver-backup.txt` and press enter. This prints, or displays, the combined files within the shell. However, it is too long to read on this window! Luckily, by using the `>` redirector, you can send the output to a new file, rather than the terminal window. Hit up to get to your last command and amend the line to `cat gulliver.txt gulliver-backup.txt > gulliver-twice.txt` and hit enter. Now, when you type `ls` you'll see `gulliver-twice.txt` appear in your directory.
-
-When combining more than two files, using a wildcard can help avoid having to write out each filename individually. Again, labour saving! A useful wildcard is `*` which is a place holder for zero or more characters or numbers (note: this is slightly different from regex...). So, if you type `cat *.txt > everything-together.txt` and hit enter, a combination of all the `.txt` files in the current directory are combined in alphabetical order as `everything-together.txt`. This can be very useful if you need to combine a large number of smaller file within a directory so that you can work with them in a text analysis program. Another wildcard worth remembering is `?` which is a place holder for a single character or number. We shall return to shell wildcards later - for now, note again that they are similar to but not the same as the Regex we saw last week.
-
-Finally, onto deleting. We won't use the now, but if you do want to delete a file, for whatever reason, the command is `rm`, or remove. **Be careful with the `rm` command**, as you don't want to delete files that you do not mean to. Unlike deleting from within your Graphical User Interface, there is **no** recycling bin or undo options. For that reason, if you are in doubt, you may want to exercise caution or maintain a regular backup of your data.
-
-The syntax for `rm` is the same as `cp` and `mv`: for example `rm gulliver.txt`, adding wildcards as appropriate to specify the files to delete.
-
-______
-#### Summary
-
-Within the Unix shell you can now:
-
-- use the command `mv` to rename and move files.
-- use the command `cp` to create a file from an existing file.
-- use the command `cat` to combine more than one file of the same file type.
-- use the wildcards `*` and `?` as place holders that delimit which files are to be manipulated by a given an action.
-- use the `rm` command to delete unwanted files.
-
-______
-## Afternoon
-
-**SLIDE** Now you can work with the unix shell you can move onto learning how to count and mine data. These are rather simple and are unlikely to totally revolutionise your research. They are, however, alongside the consistent file structure and naming I touched on last week, the foundation of a more powerful set of commands that can count and mine data you may come across.
-
-______
 #### Counting and Mining Texts
 
 You will begin by counting the contents of files using the Unix shell. The Unix shell can be used to quickly generate counts from across files, something that is tricky to achieve using the graphical user interfaces of standard office suites.
@@ -150,9 +97,7 @@ As was seen earlier today flags such as `-w` are an essential part of getting th
 
 If your reader request or piece of work is more concerned number of entries (or lines) than the number of words, you can use the line count flag. Type `wc -l 2015-06-16_BL-Microsoftbooks-list-paris.tsv` and hit enter. Combined with `wc` the flag `-l` prints a line count and the name of the file that has been counted.
 
-Finally, type `wc -c 2015-06-16_BL-Microsoftbooks-list-paris.tsv` and hit enter. This uses the flag `-c` in combination with the command `wc` to print a character count for `2015-06-16_BL-Microsoftbooks-list-paris.tsv` *Note: OS X users should replace the -c flag with -m.*
-
-With these three flags, the most obvious thing we can use `wc` for is to quickly compare the shape of sources in digital format - for example word counts per page of a book, the distribution of characters per page across a collection of newspapers, the average line lengths used by poets. You can also use `wc` with a combination of wildcards and flags to build more complex queries.
+With these two flags, the most obvious thing we can use `wc` for is to quickly compare the shape of sources in digital format - for example word counts per page of a book, the distribution of characters per page across a collection of newspapers, the average line lengths used by poets. You can also use `wc` with a combination of wildcards and flags to build more complex queries.
 
 Can you guess what the line `wc -l *.tsv` will do? Correct! This prints the line counts for `2015-06-16_BL-Microsoftbooks-list-paris.tsv` and `2015-06-16_BL-Microsoftbooks-list-london.tsv`, offering a simple means of comparing these two sets of research data. Of course, it may be faster if you only have a handful of files to compare the line count for the two documents in Libre Office Calc, Microsoft Excel, or a similar spreadsheet program. But when wishing to compare the line count for tens, hundreds, or thousands of documents, the Unix shell has a clear speed advantage.
 
@@ -180,11 +125,7 @@ With the person next to you, select a word to search for and use what you have l
 
 Search for all case sensitive instances of that word in the 'london' file. Print you results to the shell.
 
-- `grep hero NAME.tsv`
-
-Search for all case sensitive instances of that word in the 'london' file. Print you results to the shell.
-
-- `grep hero NAME.tsv`
+- `grep hero 2015-06-16_BL-Microsoftbooks-list-london.tsv`
 
 Count all case sensitive instances of that word in both tsv files in this directory. Print you results to the shell.
 
@@ -194,15 +135,15 @@ Count all case insensitive instances of that word in both tsv files in this dire
 
 - `grep -ci hero *.tsv`
 
-Search for all case insensitive instances of that word in both tsv files in this directory. Print you results to a new .tsv file. 
+Search for all case insensitive instances of that word in the 'london' file. Print you results to a new .tsv file. 
 
-- `grep -i hero *.tsv > new.tsv`
+- `grep -i hero 2015-06-16_BL-Microsoftbooks-list-london.tsv > new.tsv`
 
-Search for all case insensitive instances of that whole word in both tsv files in this directory. Print you results to a new .tsv file.
+Search for all case insensitive instances of that whole word in the 'london' file. Print you results to a new .tsv file.
 
-- `grep -iw hero *.tsv > new2.tsv`
+- `grep -iw hero 2015-06-16_BL-Microsoftbooks-list-london.tsv > new2.tsv`
 
-Compare the line counts of the last two files.
+Compare the line counts of your tsv files.
 
 - `wc -l FILENAMES`
 
@@ -226,7 +167,14 @@ ______
 
 Thankfully there are plenty of folks out there doing this sort of work and we can borrow what they do as an introduction to working with these more complex files. So for this final exercise we're going to leap forward a little in terms of difficulty to an scenario where we won't learn about everything that is happening in detail or discuss at length each command. We're going to prepare and pull apart a text to show the potential of using the Unix shell in research. And where commands we've learnt about are used, I've left some of the figuring out to do to you - so please refer to your notes if you get stuck!
 
-**NB: leave 10 minutes at the end to go through final bits**
+You have three options here:
+
+- an example of hand transcribed text: Gulliver's Travels
+- an example of text captured by an optical character recognition process: ??? (from BL books)
+- an example of a webpage: Piper's World (a GeoCities page from 1999 saved at archive.org)
+
+_____
+## A historical book
 
 _____
 #### Grabbing a text, cleaning it up
@@ -287,27 +235,53 @@ Either way we have now taken the text apart and produced a count for each word i
 And all this using a few commands on an otherwise unassuming but very powerful command line.
 
 _____
-### Finding People and Places
+## A historical website
 
-**SLIDE** Many digital humanists are beginning to use machines to tell them what sorts of elements a text - or a series of texts - contain. One popular process is Named Entity Recognition (or NER for short). This process looks at texts and makes a stab at finding the people and places it contains. As we shall see it is far from perfect, but it is an example of a process that you can run from the command line (increasing the utility of remembering what we've been up to today!)
+_____
+#### Grabbing a text, cleaning it up
 
-So, although Named Entity Recognition relies on a number of processes we need to critique, it can be run across texts quickly and simply from the command line. We start by setting the named entity recognition running on a txt (here on a text with punctuation removed)
+*Work on this exercise with the person next to you*
 
-`stanford-ner/ner.sh gulliver-noheadfootpunct.txt > gulliver_ner.txt`
+Head to `.../digitext/text/`. We're going to work again with the `diary.html` file we saw earlier.
 
-Looking at the text now, we can see that the NER has tagged some words with what it thinks are people, places, et al. We then clean up loose tags
+**SHOW THE FILE WITH `less -N diary.html`**
 
-`sed 's/\/O / /g' < gulliver_ner.txt > gulliver_ner-clean.txt`
+We're going to start by using the `sed` command. The command allows you to edit files directly.
 
-From which we can count persons...
+Type `sed '265,330d' diary.html > diary-nofoot.txt` and hit enter.
 
-`egrep -o -f personpattr gulliver_ner-clean.txt | sed 's/\/PERSON//g' | sort | uniq -c | sort -nr > gulliver_ner-pers-freq.txt` *note: `egrep` is merely a variant of grep that looks for patterns*
+The command `sed` in combination with the `d` value will look at `diary.html` and delete all values between the rows specified. The `>` action then prompts the script to this edited text to the new file specified.
 
-And count places....
+Now type `sed '1,221d' diary-nofoot.txt > diary-noheadfoot.txt` and hit enter. This does the same as before, but for the header.
 
-`egrep -o -f locpattr gulliver_ner-clean.txt | sed 's/\/LOCATION//g' | sort | uniq -c | sort -nr > gulliver_ner-loc-freq.txt`
+You now have a cleaner text. The next step is to prepare it even further for rigorous analysis.
 
-Now the results of this are up for debate. Many persons seem to me to be missing, suggesting the applicability of the software for this purpose may be questionable. But I hope you can see that the process is simple and can be reapplied to other textual data when you want to quickly get a sense of the people or places it contains. And that it is one of many tools (another useful one being `wget`, a command that enables you to archive webpages) that work well on the command line.
+First we wil remove all the html tags. Type `sed -e 's/<[^>]*>//g' diary-noheadfoot.txt > diary-notags.txt`. Here we are using a regular expression (more on which at [http://data-lessons.github.io/library-data-intro/04-regular-expressions/](http://data-lessons.github.io/library-data-intro/04-regular-expressions/)) to find all valid html tags (anything within angle brackets) and delete them. This is a complex regular expression, do don't worry too much about how it works!
+
+We now use the `tr` command, used for translating or deleting characters. Type `tr -d [:punct:] < diary-notags.txt > diary-notagspunct.txt` and hit enter.
+
+This uses the translate command and a special syntax to remove all punctuation. It also requires the use of both the output redirect `>` we have seen and the input redirect `<` we haven't seen. 
+
+Finally regularise the text by removing all the uppercase lettering. Type `tr [:upper:] [:lower:] < diary-notagspunct.txt > diary-clean.txt` and hit enter.
+
+Open the `gulliver-clean.txt` in a text editor. Note how the text has been transformed ready for analysis.
+
+______
+#### Pulling a text apart, counting word frequencies
+
+We are now ready to pull the text apart. This can be done by using 'pipes' which hold an output in memory before moving to the next. Type `tr ' ' '\n' < diary-clean.txt | sort | uniq -c | sort -r > diary-final.txt` and hit enter.
+
+The first part of this uses the translate command again, this time to translate every blank space into `\n` which renders as a new line. Every word in the file will at this stage have its own line.
+
+The second part uses the `sort` command to rearrange the text from its original order into an alphabetical configuration.
+
+The third part uses `uniq`, another new command, in combination with the `-c` flag to remove duplicate lines and to produce a word count of those duplicates.
+
+The fourth and final part sorts the text again by the counts of duplicates generated in step three.
+
+We have now taken the text apart and produced a count for each word in it. This is data we can prod and poke and visualise, that can form the basis of our investigations, and can compare with other texts processed in the same way. And if we need to run a different set of transformation for a different analysis, we can return to `diary-clean.txt` to start that work
+
+And all this using a few commands on an otherwise unassuming but very powerful command line.
 
 _____
 #### Where to go next
