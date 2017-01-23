@@ -128,27 +128,17 @@ Open the `gulliver-clean.txt` in a text editor. Note how the text has been trans
 
 #### Pulling a text apart, counting word frequencies
 
-We are now ready to pull the text apart.
+We are now ready to pull the text apart. This can be done by using 'pipes' which hold an output in memory before moving to the next. Type `tr ' ' '\n' < gulliver-clean.txt | sort | uniq -c | sort -r > gulliver-final.txt` and hit enter.
 
-Type `tr ' ' '\n' < gulliver-clean.txt > gulliver-linebyline.txt` and hit enter.
+The first part of this uses the translate command again, this time to translate every blank space into `\n` which renders as a new line. Every word in the file will at this stage have its own line.
 
-This uses the translate command again, this time to translate every blank space into `\n` which renders as a new line. Every word in the file will now have its own line.
+The second part uses the `sort` command to rearrange the text from its original order into an alphabetical configuration.
 
-This isn't much use, so to get a better sense of the data we need to use another new command called `sort`. Type `sort gulliver-linebyline.txt > gulliver-ordered.txt` and hit enter.
+The third part uses `uniq`, another new command, in combination with the `-c` flag to remove duplicate lines and to produce a word count of those duplicates.
 
-This script uses the `sort` command to rearrange the text from its original order into an alphabetical configuration. Open the file in a text editor and after scrolling past some blank space you will begin to see some numbers and finally words, or at least lots of copies of 'a'!
+The fourth and final part sorts the text again by the counts of duplicates generated in step three.
 
-This is looking more useful, but we can go one step further. Type `uniq -c gulliver-ordered.txt > gulliver-final.txt` and hit enter.
-
-This script uses `uniq`, another new command, in combination with the `-c` flag to both remove duplicate lines and produce a word count of those duplicates.
-
-Note that these steps can be simplified by building 'pipes'. So...
-
-`tr ' ' '\n' < gulliver-clean.txt | sort | uniq -c > gulliver-final.txt`
-
-...would have done the line-by-line, sorting, and removal of duplicates in one go.
-
-Either way we have now taken the text apart and produced a count for each word in it. This is data we can prod and poke and visualise, that can form the basis of our investigations, and can compare with other texts processed in the same way. And if we need to run a different set of transformation for a different analysis, we can return to `gulliver-clean.txt` to start that work
+We have now taken the text apart and produced a count for each word in it. This is data we can prod and poke and visualise, that can form the basis of our investigations, and can compare with other texts processed in the same way. And if we need to run a different set of transformation for a different analysis, we can return to `gulliver-clean.txt` to start that work.
 
 **Note: your final output will have two problems - not all punctuation will be removed and not all special characters have been handled correctly. Search online for why this might have happened (something about the `punct` command we used...)**
 
@@ -195,7 +185,69 @@ The third part uses `uniq`, another new command, in combination with the `-c` fl
 
 The fourth and final part sorts the text again by the counts of duplicates generated in step three.
 
-We have now taken the text apart and produced a count for each word in it. This is data we can prod and poke and visualise, that can form the basis of our investigations, and can compare with other texts processed in the same way. And if we need to run a different set of transformation for a different analysis, we can return to `diary-clean.txt` to start that work
+We have now taken the text apart and produced a count for each word in it. This is data we can prod and poke and visualise, that can form the basis of our investigations, and can compare with other texts processed in the same way. And if we need to run a different set of transformation for a different analysis, we can return to `diary-clean.txt` to start that work.
+
+_____
+### Option 3: A historical book (captured using Optical Character Recognition)
+
+#### Grabbing a text, cleaning it up
+
+*Work on this exercise with the person next to you*
+
+Head to `.../digitext/text/`. We're going to work again with the `gulliver.txt` file we saw earlier.
+
+First look at the file by typing `less -N gulliver.txt`. Use the down arrows and/or pageup/pagedown to look around the text. Note what the shell considers a line to be by the count on the left hand side. Hit `q` when you are down to return to the flashing command line.
+
+We will start by using the `tr`, which is a command that can translate or delete characters. Type `tr -d [:punct:] < 000003160_01_text.json > 000003160_01_text-nopunct.txt` and hit enter.
+
+This uses the translate command and a special syntax to remove all punctuation. It also requires the use of both the output redirect `>` we have seen and the input redirect `<` we haven't seen. 
+
+Finally regularise the text by removing all the uppercase lettering. Type `tr [:upper:] [:lower:] < 000003160_01_text-nopunct.txt > 000003160_01_text-clean.txt` and hit enter.
+
+Open the `000003160_01_text-clean.txt` in a text editor. Note how the text has been transformed ready for analysis.
+
+#### Pulling a text apart, counting word frequencies
+
+We are now ready to pull the text apart. This can be done by using 'pipes' which hold an output in memory before moving to the next. Type `tr ' ' '\n' < 000003160_01_text-clean.txt | sort | uniq -c | sort -r > 000003160_01_text-final.txt` and hit enter.
+
+The first part of this uses the translate command again, this time to translate every blank space into `\n` which renders as a new line. Every word in the file will at this stage have its own line.
+
+The second part uses the `sort` command to rearrange the text from its original order into an alphabetical configuration.
+
+The third part uses `uniq`, another new command, in combination with the `-c` flag to remove duplicate lines and to produce a word count of those duplicates.
+
+The fourth and final part sorts the text again by the counts of duplicates generated in step three.
+
+We have now taken the text apart and produced a count for each word in it. This is data we can prod and poke and visualise, that can form the basis of our investigations, and can compare with other texts processed in the same way. And if we need to run a different set of transformation for a different analysis, we can return to `000003160_01_text-clean.txt` to start that work.
+
+**Note: your final output will have one problem - not all the words counted are real words (see the words counted only 1 or 2 times). To better understand what has happened, search online to find out more about Optical Character Recognition of texts**
+
+_____
+### Where to go from here
+
+Deborah S. Ray and Eric J. Ray, *Unix and Linux: visual quickstart guide*, 4th edition (2009).
+
+- An invaluable (and not expensive) reference guide to using Unix shell commands - especially if you only use the command line sporadically!
+
+*The Command Line Crash Course* [http://cli.learncodethehardway.org/book/](http://cli.learncodethehardway.org/book/) 'learn code the hard way'
+
+- Good for reminders of the basics, especially if rote learning is your thing!
+
+Al Sweigart, *Automate the Boring Stuff* [https://automatetheboringstuff.com/](https://automatetheboringstuff.com/)
+
+- Practical programming for beginners based on scenarios such as batch renaming files or scrapping the web. Available as a book (£) or a website (free!)
+
+Programming for Everybody (Python) [https://www.coursera.org/course/pythonlearn](https://www.coursera.org/course/pythonlearn) 
+
+- A 10 week course that takes 2-4 hours per week. Python is popular in research programming as it is readable, relatively simple, and very powerful. This gives you some basics on which to build.
+
+Programming Historian [http://programminghistorian.org/project-team](http://programminghistorian.org/project-team).
+
+- The Programming Historian is an open, collaborative book aimed at providing programming lessons to historians. Although the examples are aimed to historians they should be applicable to most humanists.
+
+Software Carpentry [https://software-carpentry.org](https://software-carpentry.org)
+
+- Software Carpentry offers workshops and online tutorials on the basics of research computing. It is aimed at research scientists, but the lessons here on the Unix shell, Python, Git and GitHub (for version control), and R (for statistical analysis) are excellent introductions.
 
 _____
 ### Where to go from here
