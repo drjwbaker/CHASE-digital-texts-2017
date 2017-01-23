@@ -1,4 +1,4 @@
-# CHASE Digital Texts Workshop, February 2017, Open University, London
+# CHASE Digital Texts Workshop, 3 March 2017, Courtauld Institute of Art, London
 
 _____
 ### Installation (to be completed before the session)
@@ -8,35 +8,32 @@ Windows users, see the section entitled 'Installing Git Bash' in the Programming
 The data required for the lesson can be downloaded at: `???`
 
 ______
-## Morning
+## Schedule
 
-**SLIDE** Help
+- 11:00-11:30	Introduction (DK)
+- 11:30-12:00	Shell: Basics (JB)
+- 12:00-12:30	Shell: Counting (JB)
+- 12:30-13:15	Lunch
+- 13:15-14:00	Shell: Mining (JB)
+- 14:00-15:00	Shell: Free Text (JB)
+- 15:00-16:00	More with texts in and beyond the Shell (DK)
+- 16:00-17:00	Supported self-directed learning / overflow!
 
-**SLIDE** Schedule
+_____
+## Shell AM
 
-______
-### Digital Texts as Data
+Between now and 15:00 I will introduce you to programming by looking at how data can be manipulated, counted, and mined using the Unix shell, a command line interface to your computer and the files it has access to.
 
-In this session we will introduce programming by looking at how data can be manipulated, counted, and mined using the Unix shell, a command line interface to your computer and the files it has access to.
+A Unix shell is a command-line interpreter that provides a user interface for the Linux operating system and for Unix-like systems (such as iOS). For Windows users, popular shells such as Cygwin or Git Bash provide a Unix-like interface (a command line interface preferable - to me at least - to Windows own flavour of command line).
 
-A Unix shell is a command-line interpreter that provides a user interface for the Linux operating system and for Unix-like systems (such as iOS). For Windows users, popular shells such as Cygwin or Git Bash provide a Unix-like interface (a command line interface preferable - to me at least - to Windows own flavour of command line). This session will cover a small number of basic commands using Git Bash for Windows users, Terminal for iOS. These commands constitute building blocks upon which more complex commands can be constructed to fit your data or project.
+I will cover a small number of basic commands (using Git Bash for Windows users, Terminal for iOS/Linux) for interrogating and abstracting from machine readable digital objects, in this case texts and metadata about texts. These commands constitute building blocks upon which more complex commands can be constructed to fit your data or project.
 
 We'll be covering quite a lot but the key commands are in the handout for reference. We'll proceed in a follow my leader fashion. The format will be that I'll demo a command, you copy, and then we'll discuss the results. Stickies for when you get stuck or something doesn't appear to work.
 
-**SLIDE** Why? Adam
+______
+### Shell: Basics
 
-**SLIDE** What?
-
-The key here is that the digitised text is a replication of a thing, a conversion of a physical object into ones and zeros with direct preservation and access benefits, not the thing itself. This is not necesary a hinderance, rather these digital representations of real texts can be a gateway for transformation of physical things into new research objects with their own associated affordances and challenges; a transformation that can enrich, connect, and reconfigure the original data point, the thing itself.
-
-**SLIDE** How?
-
-_____
-### Shell: one approach to working with data
-
-#### Basics I
-
-**SLIDE** We will begin with the basics of navigating the Unix shell.
+We will begin with the basics of navigating the Unix shell. We need to learn this before we can do anything interesting.
 
 Start by opening your shell. When you run it, you will likely see a black window with a cursor flashing next to a dollar sign. This is our command line.
 
@@ -56,7 +53,7 @@ You've now spent a great deal of time in your home directory. Let's go somewhere
 
 If you type `cd desktop` you are now on your desktop *note: for Windows users, the case of the file/directory doesn't matter. For Linux users like me, it does, and I believe that is the same for Mac people*. To double check, type `pwd` and you should see something that represents your desktop.
 
-You'll note that this only takes you 'down' through your directory structure (as in into more nested directories). If you want to go back, you can type `cd ..`. This moves us 'up' one directory, putting us back where we started. If you ever get completely lost, the command `cd --` will bring you right back to the home directory, right where you started.
+You'll note that this only takes you 'down' through your directory structure (as in into more nested directories). If you want to go back, you can type `cd ..`. This moves us 'up' one directory, putting us back where we started. If you ever get completely lost, the command `cd` will bring you right back to the home directory, right where you started.
 
 Try exploring: move around the computer, get used to moving in and out of directories, see how different file types appear in the Unix shell. **TWO MINUTES**
 
@@ -72,43 +69,44 @@ Within the Unix shell you can now:
 - use flags `-l` and `-lh` to guide the output of the `ls` command
 - use the command `cd` to move around your computer
 
-______
-#### Counting and Mining Texts
+On the handout, I've provided a bunch of other useful basic commands - copying, moving, deleting - which we don't need for today, but you will need if you take to working in this environment.
 
-You will begin by counting the contents of files using the Unix shell. The Unix shell can be used to quickly generate counts from across files, something that is tricky to achieve using the graphical user interfaces of standard office suites.
+______
+### Shell: Counting
+
+Often you are presented with files about digital objects - say lists of books. A quick way to find out what is going on with them is to count their contents in some way. The Unix shell can be used to quickly generate counts from across files, something that is tricky to achieve using the graphical user interfaces of standard office suites.
 
 In the Unix shell, use the `cd` command to navigate to the directory that contains our data: the `tabular` subdirectory of the `...digitext` directory. Remember, if at any time you are not sure where you are in your directory structure, type `pwd` and hit enter.
 
 Type `ls -lh` and then hit enter. This prints, or displays, a list that includes a file and a subdirectory.
 
-The file in this directory is the dataset `2015-06-16_BL-Microsoftbooks-list.tsv` that metadata for nearly 50k 17th, 18th, and 19th century books digitsed by Microsoft in partnership with the British Library.
-
-The subdirectory is named `derived_data`. It contains two .tsv files derived from `2015-06-16_BL-Microsoftbooks-list.tsv` by keyword appearance. The `derived_data` directory also includes a subdirectory called `results`.
+The file in this directory are two datasets that derive from metadata for nearly 50k 17th, 18th, and 19th century books digitsed by Microsoft in partnership with the British Library.
 
 *Note: TSV files are those in which within each row the units of data (or cells) are separated by tabs. They are similar to CSV (comma seperated value) files were the values are separated by commas. The latter are more common but can cause problems with the kind of data we have, where commas can be found within the cells (though with the right encoding this can be overcome). Either way both can be read in simple text editors or in spreadsheet programs such as Libre Office Calc or Microsoft Excel.*
 
-Before you begin working with these files, you should move into the directory in which they are stored. Navigate to `...digitext/tabular/derived_data` directory.
+From here you can count the contents of the files.
 
-Now that you are here you can count the contents of the files.
-
-The Unix command for counting is `wc`. Type `wc -w 2015-06-16_BL-Microsoftbooks-list-paris.tsv` and hit enter. The flag `-w` combined with `wc` instructs the computer to print a word count, and the name of the file that has been counted, into the shell.
+The Unix command for counting is `wc`. Type `wc -w BLbooks-Paris.tsv` and hit enter. The flag `-w` combined with `wc` instructs the computer to print a word count, and the name of the file that has been counted, into the shell.
 
 As was seen earlier today flags such as `-w` are an essential part of getting the most out of the Unix shell as they give you better control over commands.
 
-If your reader request or piece of work is more concerned number of entries (or lines) than the number of words, you can use the line count flag. Type `wc -l 2015-06-16_BL-Microsoftbooks-list-paris.tsv` and hit enter. Combined with `wc` the flag `-l` prints a line count and the name of the file that has been counted.
+If your reader request or piece of work is more concerned number of entries (or lines) than the number of words, you can use the line count flag. Type `wc -l BLbooks-Paris.tsv` and hit enter. Combined with `wc` the flag `-l` prints a line count and the name of the file that has been counted.
 
 With these two flags, the most obvious thing we can use `wc` for is to quickly compare the shape of sources in digital format - for example word counts per page of a book, the distribution of characters per page across a collection of newspapers, the average line lengths used by poets. You can also use `wc` with a combination of wildcards and flags to build more complex queries.
 
-Can you guess what the line `wc -l *.tsv` will do? Correct! This prints the line counts for `2015-06-16_BL-Microsoftbooks-list-paris.tsv` and `2015-06-16_BL-Microsoftbooks-list-london.tsv`, offering a simple means of comparing these two sets of research data. Of course, it may be faster if you only have a handful of files to compare the line count for the two documents in Libre Office Calc, Microsoft Excel, or a similar spreadsheet program. But when wishing to compare the line count for tens, hundreds, or thousands of documents, the Unix shell has a clear speed advantage.
+Can you guess what the line `wc -l *.tsv` will do? Correct! This prints the line counts for `BLbooks-Paris.tsv` and `BLbooks-London.tsv`, offering a simple means of comparing these two sets of research data. Of course, it may be faster if you only have a handful of files to compare the line count for the two documents in Libre Office Calc, Microsoft Excel, or a similar spreadsheet program. But when wishing to compare the line count for tens, hundreds, or thousands of documents, the Unix shell has a clear speed advantage.
 
 Moreover, as our datasets increase in size you can use the Unix shell to do more than copy these line counts by hand, by the use of print screen, or by copy and paste methods. Using the `>` redirect operator we saw earlier you can export our query results to a new file. Type `wc -l *.tsv > results/FOOBAR.txt` (or something like that, the last bit after `results/` could be anything!) and hit enter. This runs the same query as before, but rather than print the results within the Unix shell it saves the results as `FOOBAR.txt`. By prefacing this with `results/` the shelll is instructed to save the .txt file to the `results` sub-directory. To check this, navigate to the `results` subdirectory, hit enter, type `ls`, and hit enter again to see this file. Type `FOOBAR.txt` to see the file contents in the shell (as it is 10 lines or fewer in length, all the file contents will be shown here).
 
+_____
+## Shell PM
+
 ______
-#### Mining
+### Shell: Mining
 
-The Unix shell can do much more than count the words, characters, and lines within a file. The `grep` command (meaning 'global regular expression print') is used to search across multiple files for specific strings of characters. It is able to do so much faster than the graphical search interface offered by most operating systems or office suites. And combined with the `>` operator, the `grep` command becomes a powerful research tool can be used to mine your data for characteristics or word clusters that appear across multiple files and then export that data to a new file. The only limitations here are your imagination, the shape of your data, and - when working with thousands or millions of files - the processing power at your disposal.
+The Unix shell can do much more than count the words and lines within a file. The `grep` command (meaning 'global regular expression print') is used to search across multiple files for specific strings of characters. It is able to do so much faster than the graphical search interface offered by most operating systems or office suites. And combined with the `>` operator, the `grep` command becomes a powerful research tool can be used to mine your data for characteristics or word clusters that appear across multiple files and then export that data to a new file. The only limitations here are your imagination, the shape of your data, and - when working with thousands or millions of files - the processing power at your disposal.
 
-To begin using `grep`, first navigate to the `derived_data` directory (`cd ..`). Here type `grep 1832 *.tsv` and hit enter. This query looks across all files in the directory that fit the given criteria (the .tsv files) for instances of the string, or character cluster, '1832'. It then prints them within the shell.
+To begin using `grep`, first navigate to the `...digitext/tabular` directory. Here type `grep 1832 *.tsv` and hit enter. This query looks across all files in the directory that fit the given criteria (the .tsv files) for instances of the string, or character cluster, '1832'. It then prints them within the shell.
 
 Press the up arrow once in order to cycle back to your most recent action. Amend `grep 1832 *.tsv` to `grep -c 1832 *.tsv` and hit enter. The shell now prints the number of times the string 1832 appeared in each `*.tsv file`. If you look at the output from the previous command, this tends to be refer to the date field of each book title.
 
@@ -125,7 +123,7 @@ With the person next to you, select a word to search for and use what you have l
 
 Search for all case sensitive instances of that word in the 'london' file. Print you results to the shell.
 
-- `grep hero 2015-06-16_BL-Microsoftbooks-list-london.tsv`
+- `grep hero BLbooks-London.tsv`
 
 Count all case sensitive instances of that word in both tsv files in this directory. Print you results to the shell.
 
@@ -137,11 +135,11 @@ Count all case insensitive instances of that word in both tsv files in this dire
 
 Search for all case insensitive instances of that word in the 'london' file. Print you results to a new .tsv file. 
 
-- `grep -i hero 2015-06-16_BL-Microsoftbooks-list-london.tsv > new.tsv`
+- `grep -i hero BLbooks-London.tsv > new.tsv`
 
 Search for all case insensitive instances of that whole word in the 'london' file. Print you results to a new .tsv file.
 
-- `grep -iw hero 2015-06-16_BL-Microsoftbooks-list-london.tsv > new2.tsv`
+- `grep -iw hero BLbooks-London.tsv > new2.tsv`
 
 Compare the line counts of your tsv files.
 
@@ -161,11 +159,11 @@ Within the Unix shell you can now:
 - combine these commands and flags to build complex queries in a way that suggests the potential for using the Unix shell to count and mine your research data and research projects.
 
 ______
-### Ripping a Text Apart
+### Shell: Free Text
 
-**SLIDE** So far we have looked at how to use the Unix shell to manipulate, count, and mine tabulated data. Most data, especially digitised documents used in research, are much messier book metadata. Nonetheless many of the same techniques can be applied to non-tabulated data, such as free text, we just need to think carefully about what it is we are counting and how we can get the best out of the Unix shell. 
+So far we have looked at how to use the Unix shell to manipulate, count, and mine tabulated data. Most data, especially digitised documents used in research, are much messier than book metadata. Nonetheless many of the same techniques can be applied to non-tabulated data, such as free text, we just need to think carefully about what it is we are counting and how we can get the best out of the Unix shell. 
 
-Thankfully there are plenty of folks out there doing this sort of work and we can borrow what they do as an introduction to working with these more complex files. So for this final exercise we're going to leap forward a little in terms of difficulty to an scenario where we won't learn about everything that is happening in detail or discuss at length each command. We're going to prepare and pull apart a text to show the potential of using the Unix shell in research. And where commands we've learnt about are used, I've left some of the figuring out to do to you - so please refer to your notes if you get stuck!
+Thankfully there are plenty of folks out there doing this sort of work and we can borrow what they do as an introduction to working with these more complex files. So for this exercise we're going to leap forward a little in terms of difficulty to an scenario where we won't learn about everything that is happening in detail or discuss at length each command. We're going to prepare and pull apart a text to show the potential of using the Unix shell in research. And where commands we've learnt about are used, I've left some of the figuring out to do to you - so please refer to your notes if you get stuck!
 
 You have three options here:
 
@@ -174,18 +172,18 @@ You have three options here:
 - an example of a webpage: Piper's World (a GeoCities page from 1999 saved at archive.org)
 
 _____
-## A historical book
+### Option 1: A historical book
 
-_____
+
 #### Grabbing a text, cleaning it up
 
 *Work on this exercise with the person next to you*
 
 Head to `.../digitext/text/`. We're going to work again with the `gulliver.txt` file we saw earlier.
 
-**SHOW THE FILE WITH `less -N gulliver.txt`**
+First look at the file by typing `less -N gulliver.txt`. Use the down arrows and/or pageup/pagedown to look around the text. Note what the shell considers a line to be by the count on the left hand side. Hit `q` when you are down to return to the flashing command line.
 
-We're going to start by using the `sed` command. The command allows you to edit files directly.
+We're going to start our work on cleaning this text by using the `sed` command. The command allows you to edit files directly.
 
 Type `sed '9352,9714d' gulliver.txt > gulliver-nofoot.txt` and hit enter.
 
@@ -203,7 +201,6 @@ Finally regularise the text by removing all the uppercase lettering. Type `tr [:
 
 Open the `gulliver-clean.txt` in a text editor. Note how the text has been transformed ready for analysis.
 
-______
 #### Pulling a text apart, counting word frequencies
 
 We are now ready to pull the text apart.
@@ -220,9 +217,7 @@ This is looking more useful, but we can go one step further. Type `uniq -c gulli
 
 This script uses `uniq`, another new command, in combination with the `-c` flag to both remove duplicate lines and produce a word count of those duplicates.
 
-**Note: there is a windows/linux issue here worth flagging about special characters**
-
-**SLIDE** Note that these steps can be simplified by building 'pipes'. So...
+Note that these steps can be simplified by building 'pipes'. So...
 
 `tr ' ' '\n' < gulliver-clean.txt | sort | uniq -c > gulliver-final.txt`
 
@@ -230,21 +225,18 @@ This script uses `uniq`, another new command, in combination with the `-c` flag 
 
 Either way we have now taken the text apart and produced a count for each word in it. This is data we can prod and poke and visualise, that can form the basis of our investigations, and can compare with other texts processed in the same way. And if we need to run a different set of transformation for a different analysis, we can return to `gulliver-clean.txt` to start that work
 
-**note there are a few bits of punctuation in here - I've left these in deliberately as you should always bug fix! The internet is a always a good place to start searching for why this might have happened (something about the `punct` command we used...)**
-
-And all this using a few commands on an otherwise unassuming but very powerful command line.
+**Note: your final output will have two problems - not all punctuation will be removed and not all special characters have been handled correctly. Search online for why this might have happened (something about the `punct` command we used...)**
 
 _____
-## A historical website
+### Option 2: A historical website
 
-_____
 #### Grabbing a text, cleaning it up
 
 *Work on this exercise with the person next to you*
 
 Head to `.../digitext/text/`. We're going to work again with the `diary.html` file we saw earlier.
 
-**SHOW THE FILE WITH `less -N diary.html`**
+First look at the file by typing `less -N diary.html`. Use the down arrows and/or pageup/pagedown to look around the text. Note what the shell considers a line to be by the count on the left hand side. Hit `q` when you are down to return to the flashing command line.
 
 We're going to start by using the `sed` command. The command allows you to edit files directly.
 
@@ -266,7 +258,6 @@ Finally regularise the text by removing all the uppercase lettering. Type `tr [:
 
 Open the `gulliver-clean.txt` in a text editor. Note how the text has been transformed ready for analysis.
 
-______
 #### Pulling a text apart, counting word frequencies
 
 We are now ready to pull the text apart. This can be done by using 'pipes' which hold an output in memory before moving to the next. Type `tr ' ' '\n' < diary-clean.txt | sort | uniq -c | sort -r > diary-final.txt` and hit enter.
@@ -281,40 +272,40 @@ The fourth and final part sorts the text again by the counts of duplicates gener
 
 We have now taken the text apart and produced a count for each word in it. This is data we can prod and poke and visualise, that can form the basis of our investigations, and can compare with other texts processed in the same way. And if we need to run a different set of transformation for a different analysis, we can return to `diary-clean.txt` to start that work
 
-And all this using a few commands on an otherwise unassuming but very powerful command line.
-
 _____
-#### Where to go next
+### Where to go from here
 
-**SLIDE** Deborah S. Ray and Eric J. Ray, *Unix and Linux: visual quickstart guide*, 4th edition (2009). Invaluable (and not expensive) as a reference guide - especially if you only use the command line sporadically!
+Deborah S. Ray and Eric J. Ray, *Unix and Linux: visual quickstart guide*, 4th edition (2009).
 
-[The Command Line Crash Course](http://cli.learncodethehardway.org/book/) 'learn code the hard way' -- good for reminders of the basics.
+- An invaluable (and not expensive) reference guide to using Unix shell commands - especially if you only use the command line sporadically!
 
-[Automate the Boring Stuff](https://automatetheboringstuff.com/)
+*The Command Line Crash Course* [http://cli.learncodethehardway.org/book/](http://cli.learncodethehardway.org/book/) 'learn code the hard way'
 
-**SLIDE** [Coursera Computer Science 101](https://www.coursera.org/course/cs101) If you feel you need some context to what we've done today, this is ideal covering how computers work, jargon, and key concepts in programming (such as loops and logic). Free, doesn't have to be taken as a class but in your own time.
+- Good for reminders of the basics, especially if rote learning is your thing!
 
-Another Coursera course, [Programming for Everybody (Python)](https://www.coursera.org/course/pythonlearn) is available and lasts 10 weeks. So if you have 2-4 hours to spare. Python is popular in research programming as it is readable, relatively simple, and very powerful.
+Al Sweigart, *Automate the Boring Stuff* [https://automatetheboringstuff.com/](https://automatetheboringstuff.com/)
 
-Bill Turkel and the Digital History community more broadly. The second lesson you did today was based on a lesson Bill has on [his website](http://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/) and Bill is also a general editor of the [Programming Historian](http://programminghistorian.org/project-team). The Programming Historian is an open, collaborative book aimed at providing programming lessons to historians. Today's course is based on two lessons I wrote with Ian Milligan, an historian at Waterloo, Canada, for ProgHist and it is still the default place I go to to learn research relevant computational skills
+- Practical programming for beginners based on scenarios such as batch renaming files or scrapping the web. Available as a book (£) or a website (free!)
 
-_____
-#### Conclusion
+Programming for Everybody (Python) [https://www.coursera.org/course/pythonlearn](https://www.coursera.org/course/pythonlearn) 
 
-**SLIDE** In this session you have learned to navigate the Unix shell, to undertake some basic file counting, concatenation and deletion, to query across data for common strings, to save results and derived data, and to prepare textual data for rigorous computational analysis.
+- A 10 week course that takes 2-4 hours per week. Python is popular in research programming as it is readable, relatively simple, and very powerful. This gives you some basics on which to build.
 
-This only scratches the surface of what the Unix environment is capable of. It is hoped, however, that this session has provided a taster sufficient to prompt further investigation and productive play. 
+Programming Historian [http://programminghistorian.org/project-team](http://programminghistorian.org/project-team).
 
-Keep in mind that the full potential of the tools can offer may only emerge upon embedding these skills into real projects. Nonetheless, being able to manipulate, count and mine thousands on files is extremely useful. Even a large collection of files which do not contain any alpha-numeric data elements, such as image files, can be easily sorted, selected and queried depending on the amount of description, of metadata contained in each filename. If not a prerequisite of working with the Unix, then taking the time to structure your data in a consistent and predictable manner is certainly a significant step towards getting the most out of Unix commands. And if you can find a way of using the Unix shell regularly - perhaps only to copy or amend files - you'll keep the basics fresh, meaning that next time you have cause to use the Unix shell for more complex commands, you shouldn't need to learn it all over again.
+- The Programming Historian is an open, collaborative book aimed at providing programming lessons to historians. Although the examples are aimed to historians they should be applicable to most humanists.
+
+Software Carpentry [https://software-carpentry.org](https://software-carpentry.org)
+
+- Software Carpentry offers workshops and online tutorials on the basics of research computing. It is aimed at research scientists, but the lessons here on the Unix shell, Python, Git and GitHub (for version control), and R (for statistical analysis) are excellent introductions.
 
 _____
 ### References
+
+19th Century Books - Book Metadata - 01/09/2013. British Library (2014) DOI: [10.21250/DB21](https://dx.doi.org/10.21250/DB21)
 
 James Baker and Ian Milligan, 'Counting and mining research data with Unix', *The Programming Historian* ([2014](http://programminghistorian.org/lessons/research-data-with-unix)
 
 Ian Milligan and James Baker, 'Introduction to the Bash Command Line', *The Programming Historian* ([2014](http://programminghistorian.org/lessons/intro-to-bash))
 
-William J. Turkel, 'Named Entity Recognition with Command Line Tools in Linux' ([30 June 2013](http://williamjturkel.net/2013/06/30/named-entity-recognition-with-command-line-tools-in-linux/)). The section 'NER Demo' is adapted from this and shared under a [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported](http://creativecommons.org/licenses/by-nc-sa/3.0/).
-
-William J. Turkel, 'Basic Text Analysis with Command Line Tools in Linux' ([15 June 2013](http://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/). The sections 'Grabbing a text, cleaning it up' and 'Pulling a text apart, counting word frequencies' are adapted from this and shared under a [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported](http://creativecommons.org/licenses/by-nc-sa/3.0/).
-
+William J. Turkel, 'Basic Text Analysis with Command Line Tools in Linux' ([15 June 2013](http://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/). The section 'Shell: Free Text' is adapted from this and shared under a [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported](http://creativecommons.org/licenses/by-nc-sa/3.0/).
