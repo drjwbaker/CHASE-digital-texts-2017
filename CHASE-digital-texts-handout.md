@@ -171,7 +171,7 @@ This uses the translate command and a special syntax to remove all punctuation. 
 
 Finally regularise the text by removing all the uppercase lettering. Type `tr [:upper:] [:lower:] < diary-notagspunct.txt > diary-clean.txt` and hit enter.
 
-Open the `gulliver-clean.txt` in a text editor. Note how the text has been transformed ready for analysis.
+Open the `diary-clean.txt` in a text editor. Note how the text has been transformed ready for analysis.
 
 #### Pulling a text apart, counting word frequencies
 
