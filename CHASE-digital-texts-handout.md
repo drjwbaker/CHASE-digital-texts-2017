@@ -196,7 +196,7 @@ _____
 
 Head to `.../digitext/text/`. We're going to work again with the `000003160_01_text.json` file we saw earlier.
 
-First look at the file by typing `less -N gulliver.txt`. Use the down arrows and/or pageup/pagedown to look around the text. Note what the shell considers a line to be by the count on the left hand side. Hit `q` when you are down to return to the flashing command line.
+First look at the file by typing `less -N 000003160_01_text.json`. Use the down arrows and/or pageup/pagedown to look around the text. Note what the shell considers a line to be by the count on the left hand side. Hit `q` when you are down to return to the flashing command line.
 
 We will start by using the `tr`, which is a command that can translate or delete characters. Type `tr -d [:punct:] < 000003160_01_text.json > 000003160_01_text-nopunct.txt` and hit enter.
 
