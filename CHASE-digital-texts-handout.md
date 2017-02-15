@@ -194,7 +194,7 @@ _____
 
 *Work on this exercise with the person next to you*
 
-Head to `.../digitext/text/`. We're going to work again with the `gulliver.txt` file we saw earlier.
+Head to `.../digitext/text/`. We're going to work again with the `000003160_01_text.json` file we saw earlier.
 
 First look at the file by typing `less -N gulliver.txt`. Use the down arrows and/or pageup/pagedown to look around the text. Note what the shell considers a line to be by the count on the left hand side. Hit `q` when you are down to return to the flashing command line.
 
