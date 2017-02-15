@@ -91,7 +91,7 @@ With the person next to you, select a word to search for and use what you have l
 - Search for all case insensitive instances of that word in the 'london' file. Print you results to a new .tsv file. 
 - Search for all case insensitive instances of that whole word in the 'london' file. Print you results to a new .tsv file.
 - Compare the line counts of your tsv files.
-- Open both files in a text editor (Notepad++, Atom, Kate, whatever you prefer) or Excel-like program to see the difference between searching strings and searching whole words using `grep`
+- Open both files in a spreadsheet or text editor (Excel, LibreOffice, Notepad, Notepad++, Atom, Kate, whatever you prefer) or Excel-like program to see the difference between searching strings and searching whole words using `grep`
 
 ______
 ### Shell: Free Text 
