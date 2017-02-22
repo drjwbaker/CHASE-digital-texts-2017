@@ -179,7 +179,7 @@ _____
 
 *Work on this exercise with the person next to you*
 
-Head to `.../digitext/text/`. We're going to work again with the `gulliver.txt` file we saw earlier.
+Head to `.../digitext/text/`. We're going to work with `gulliver.txt`.
 
 First look at the file by typing `less -N gulliver.txt`. Use the down arrows and/or pageup/pagedown to look around the text. Note what the shell considers a line to be by the count on the left hand side. Hit `q` when you are down to return to the flashing command line.
 
@@ -224,7 +224,7 @@ _____
 
 *Work on this exercise with the person next to you*
 
-Head to `.../digitext/text/`. We're going to work again with the `diary.html` file we saw earlier.
+Head to `.../digitext/text/`. We're going to work with `diary.html`.
 
 First look at the file by typing `less -N diary.html`. Use the down arrows and/or pageup/pagedown to look around the text. Note what the shell considers a line to be by the count on the left hand side. Hit `q` when you are down to return to the flashing command line.
 
@@ -269,7 +269,7 @@ _____
 
 *Work on this exercise with the person next to you*
 
-Head to `.../digitext/text/`. We're going to work again with the `000003160_01_text.json` file we saw earlier.
+Head to `.../digitext/text/`. We're going to work with `000003160_01_text.json`.
 
 First look at the file by typing `less -N 000003160_01_text.json`. Use the down arrows and/or pageup/pagedown to look around the text. Note what the shell considers a line to be by the count on the left hand side. Hit `q` when you are down to return to the flashing command line.
 
