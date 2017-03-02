@@ -377,7 +377,7 @@ Marking-up text is very much a task you undertake with the end in mind. Marking-
 
 There are many other XML schemas used by biodiversity researchers, each schema having its own strengths and weaknesses. But then each was developed to meet a specific need. This is one overarching advantage of XML, being extensible; it can be adapted to meet these different needs. Further through the use of namespaces you can apply more than one XML schema to the same file.
 
-Interestingly, though taXMLit is very detailed and complicated, the authors chose not to start from scratch when developing it. Instead, they chose to extend an already established XML schema that successfully provides basic document level mark-up: TEI.
+Interestingly, though taXMLit is very detailed and complicated, the authors chose not to start from scratch when developing it. Instead, they chose to extend an already established XML schema that successfully provides basic document level mark-up:  Text Encoding Initiative (TEI).
 
  
 ## Practical XML for Digital Humanities: TEI
@@ -388,7 +388,7 @@ Interestingly, though taXMLit is very detailed and complicated, the authors chos
 
 The main advantage for Digital Humanists is that TEI is the *de facto* standard in the discipline. Hence, there are many resources, conferences and experienced colleagues to call on. TEI has been around for over twenty years, so there is probably some mark-up in it somewhere that already meets your needs!
 
-*There will be a time-out here for you to explore the [TEI guidelines](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/) and for us to discuss them further.*
+*There will be a time-out here for you to explore the [TEI guidelines](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/) and for us to discuss them further. There will be time to pursue in-depth questions in this afternoon's final session.*
 
 If you do use TEI then catch up with the archive of the [Journal of the Text Encoding Initiative](https://journal.tei-c.org/journal/) and subscribe to the [TEI mailing list](https://listserv.brown.edu/archives/cgi-bin/wa?A0=TEI-L).
 
